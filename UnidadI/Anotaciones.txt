@@ -1,0 +1,52 @@
+HTML (HyperText Markup Language): Para definir la estructura de una pagina web.
+XML (Xtensible Markup Language)
+
+<etiqueta>
+</etiqueta>
+
+
+
+CSV:
+Pedro,35,Masculino,666789
+
+
+XML:
+<persona>
+    <nombre>Pedro</nombre>
+    <edad>35</edad>
+    <genero>MAsculino</genero>
+    <telefono>666789</telefono>
+</persona>
+
+
+Direccion IP: 0.0.0.0 - 255.255.255.255
+Sirve para identificar a una computadora en una red.
+    Direcciones IP privadas:
+        Rangos de ips.
+    Direcciones IP publicas:
+        Rangos de ips.
+
+
+IP de google: 216.58.192.36
+
+Nombre de dominio: Alias o nombre para una direccion IP.
+Empresas comunes:
+    Godaddy
+    Heroku
+    puntohn (Local, Red de desarrollo sostenible en HN)
+
+
+Hosting/Hospedaje: Disco duro y servicios para publicar una web.
+
+
+Apache: Servidor para publicar paginas desarrolladas en PHP
+
+WAMP - WindowsApacheMysqlPHP (Descargar antes VisualC .net framework)
+LAMPP - LinuxApacheMysqlPHP-Perl
+MAMP - MacApacheMysqlPHP
+XAMPP - X SO ApacheMysqlPHP Perl
+
+
+
+Apache es un programa tipo servicio, demonio o programa en segundo plano: Por lo general no tienen GUI
+    Ver servicios en windows: Panel de control - Herramientas Administrativas - Servicios
