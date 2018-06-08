@@ -9,15 +9,20 @@
 <body>
     <h1>Etiquetas para formularios</h1>
     <!-- Para agrupar controles de formularios -->
-    <form>
+    <form> <!--Form sirve para peticiones sincronas en conjunto con el atributo action o para selector de estilos css-->
+        <!-- Ctr + Alt + Cursor arriba o cursor abajo para multiples cursores en vs code o sublime text-->
         <input type="text" placeholder="Ingrese un nombre" size="50" value="El Brayan" id="txt-nombre" name="txt-nombre"><br>
         <input type="password" placeholder="Contraseña"><br>
         Gustos:<br>
-        <label for="chk-1">Baleadas</label><input type="checkbox" id="chk-1"><br>
-        <label for="chk-2">Sopa de mondongo</label><input type="checkbox" id="chk-2"><br>
-        <label for="chk-3">Dormir</label><input type="checkbox" id="chk-3"><br>
-        Anime<input type="checkbox" id="chk-4"><br>
-        <input type="radio"><br>
+        <label for="chk-1">Baleadas</label><input type="checkbox" name="chk-gustos[]" id="chk-1" value="1"><br>
+        <label for="chk-2">Sopa de mondongo</label><input type="checkbox" name="chk-gustos[]" id="chk-2" value="2"><br>
+        <label for="chk-3">Dormir</label><input type="checkbox" name="chk-gustos[]" id="chk-3" value="3"><br>
+        <label for="chk-4">Anime</label><input type="checkbox" name="chk-gustos[]" id="chk-4" value="4"><br>
+        <label>Anime <input type="checkbox" name="chk-gustos[]" value="4"></label><br>
+        <br>
+        Genero:
+        <label for="rbt-femenino">Femenino</label><input type="radio" name="rbt-genero" id="rbt-femenino" value="F"> 
+        <label for="rbt-masculino">Masculino</label><input type="radio" name="rbt-genero" id="rbt-masculino" value="M"><br>
         
 
         <!--Variantes de input type text de HTML5-->
@@ -30,9 +35,26 @@
         <input type="datetime"placeholder="Fecha/Hora"><br>
         <input type="tel"placeholder="Telefono"><br>
         <!--FIN Variantes de input type text de HTML5-->
+        <label>Direccion:</label><br>
+        <textarea placeholder="Escriba su dirección aquí" rows="10" cols="40">Este es el contenido por defecto del textarea</textarea><br>
+        <!--Listas desplegables-->
+        <label>Pais: </label>
+        <select name="slc-pais" id="slc-pais">
+            <option value="-">Seleccione una opcion</option>
+            <option value="1">Honduras</option>
+            <option value="2">Nicaragua</option>
+            <option value="3">Guatemala</option>
+            <option value="4">El Salvador</option>
+            <option value="5">Costa Rica</option>
+        </select>
 
-        <input type="button" value="Boton tipo Button"><br>
-        <input type="submit" value="Boton tipo submit"><br>
+        <hr>
+        <!--Botones con accion automatica programada para peticiones sincronas-->
+        <button type="submit">Click aquí</button><br>
+        <input type="submit" value="Click aquí"><br>
+        <!--Botones SIN accion predefinida, estos pueden ejecutar una accion definida por el programador mediante javascript-->
+        <button type="button">Click aquí</button><br>
+        <input type="button" value="Click aquí"><br>
     </form>
 </body>
 </html>
