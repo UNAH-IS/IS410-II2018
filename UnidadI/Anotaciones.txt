@@ -62,6 +62,34 @@ Existen 3 formas para incluir estilos en una página web:
         nombre-estilo2: valor-estilo2;
         ...
         nombre-estiloN: valor-estiloN;
-2. Estilos en el encabezado de la página:
+2. Estilos en el encabezado de la página: 
+    Se deben escribir estos estilos dentro de la etiqueta style que debe estar ubicada 
+    dentro de la etiqueta head.
+    Es posible aplicar estilos de este tipo utilizando selectores, los selectores pueden ser:
+        -Un identificador o ID: se debe escribir el simbolo numeral y luego el ID al cual hace referencia de la siguiente forma:
+            #id{
+                nombre-estilo1: valor-estilo1;
+                nombre-estilo2: valor-estilo2;
+                ...
+                nombre-estiloN: valor-estiloN;
+            }
+        -Utilizar el nombre de una etiqueta. En este caso los estilos se aplicarian a todas las etiquetas del mismo tipo.
+         La sintaxis es:
+            nombre-etiqueta{
+                nombre-estilo1: valor-estilo1;
+                nombre-estilo2: valor-estilo2;
+                ...
+                nombre-estiloN: valor-estiloN;
+            }
+        -Utilizar una clase CSS. 
+            Sintaxis:
+            .nombre-clase{
+                nombre-estilo1: valor-estilo1;
+                nombre-estilo2: valor-estilo2;
+                ...
+                nombre-estiloN: valor-estiloN;
+            }
+
+        Para aplicar una clase CSS a un etiqueta se utiliza el atributo class.
 3. Estilos en archivos externos:
 
