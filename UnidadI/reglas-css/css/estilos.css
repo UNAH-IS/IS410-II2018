@@ -1,0 +1,43 @@
+/*Estos son comentarios en CSS */
+
+/*selector{
+    nombre-estilo:valor-estilo;
+}*/
+
+@font-face {
+    font-family: fuente-halloween;
+    src: url(fonts/Eater-Regular.ttf);
+}
+#parrafo-rojo{
+    color:red;
+    font-family: fuente-halloween;
+    font-size: 30px;
+}
+
+#parrafo-rojo{
+    color:blue;
+}
+
+#parrafo-cursiva{
+    font-family: 'Lobster', cursive;
+    color:green;
+}
+
+h1{
+    font-size: 50;
+    color:blue;
+}
+
+p{
+    border: #2e04a1 dotted 3px;
+    /*color: red !important;*/
+}
+
+.texto-negrita{
+    font-weight: bold;
+    color:orange;
+}
+
+body{
+    background-image: url(../img/fondo.jpg);
+}

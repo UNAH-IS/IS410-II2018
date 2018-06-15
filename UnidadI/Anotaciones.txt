@@ -92,4 +92,6 @@ Existen 3 formas para incluir estilos en una página web:
 
         Para aplicar una clase CSS a un etiqueta se utiliza el atributo class.
 3. Estilos en archivos externos:
-
+    Se escriben los estilos con los respectivos selectores en un nuevo archivo con extensión css
+    Para incluir el archivo externo en el html se hace de la siguiente forma:
+        <link href="url-archivo.css" rel="stylesheet">

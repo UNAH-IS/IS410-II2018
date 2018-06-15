@@ -1,0 +1,66 @@
+body{
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+#imagen-logo{
+    width: 200px;
+}
+
+#div-login{
+    background-color:#F3F3F3;
+    width: 300px;
+    padding:40px;
+}
+
+h1{
+    font-size: 2em;
+    font-weight: 100;
+}
+
+/*.caja-texto{
+    width: 100%;
+    font-size: 1.2em;
+    padding: 10px 11px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #b7b7b7;
+}*/
+
+input[type="email"], input[type="password"]{
+    width: 100%;
+    font-size: 1.2em;
+    padding: 10px 11px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #b7b7b7;
+    margin-bottom: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: #0080ff;
+    font-size:0.9em;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #153e68;
+}
+
+button{
+    background-color: #E50914;
+    width: 100%;
+    color: #fff;
+    border: transparent;
+    padding: 10px;
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
