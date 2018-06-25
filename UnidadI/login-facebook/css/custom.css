@@ -1,0 +1,26 @@
+body {
+  padding-top: 5rem;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+
+.bg-dark {
+  background-color: #3B5998 !important;
+}
+
+.btn-primary{
+  background-color:#254b8b;
+  border:0px;
+}
+
+
+.btn-primary:hover, .btn-primary:active{
+  background-color:#29487d;
+}
+
+.navbar{
+  padding: .5rem 8rem;
+}
