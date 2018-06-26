@@ -11,6 +11,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" />
   </head>
 
   <body>
@@ -32,14 +33,48 @@
     </nav>
 
     <main role="main" class="container">
-
-      <div class="starter-template">
-        <h1 style="display:block;">Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam fugit alias nostrum quaerat, maiores eius velit recusandae. Error, animi blanditiis maxime accusamus suscipit dolorem natus? <span style="font-weight: bold; text-decoration: underline;font-style: italic">Maiores laboriosam</span> ducimus odio ad voluptates officiis perferendis quisquam, repellat nulla assumenda animi quam, accusantium pariatur quis commodi illo voluptatibus deserunt eligendi sapiente officia blanditiis voluptas! Ex aliquid architecto natus a laudantium, sapiente tenetur, ipsam adipisci eum, quo eveniet pariatur eos aspernatur modi illo dolor excepturi. Cum labore voluptatum, eveniet iste fugit quod ullam omnis exercitationem maxime ex culpa ut obcaecati adipisci quisquam odit corporis quae repellat esse id! Repellendus, cum. Rerum nihil placeat commodi.
-        </p>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+          <h2>Connect with friends and the world around you on Facebook.</h2>
+          <table id="tabla-items">
+              <tr>
+                <td><img src="img/icono1.png"></td>
+                <td class="item"><strong>See photos and updates</strong> from friends in News Feed.</td>
+              </tr>
+              <tr>
+                <td><img src="img/icono2.png"></td>
+                <td class="item"><strong>Share what's new</strong> in your life on your Timeline.</td>
+              </tr>
+              <tr>
+                <td><img src="img/icono3.png"></td>
+                <td class="item"><strong>Find more</strong> of what you're looking for with Facebook Search.</td>
+              </tr>
+            </table>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+            <h1>Sign Up</h1>
+            <span class="item">It’s free and always will be.</span>
+            <form id="formulario-registro">
+              <div class="row">
+                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12"><input class="form-control" type="text" placeholder="First name"></div>
+                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12"><input class="form-control" type="text" placeholder="Last name"></div>
+                  <div class="col-12"><input class="form-control" type="text" placeholder="Mobile number or email"></div>
+                  <div class="col-12"><input class="form-control" type="password" placeholder="New password"></div>
+                  <div class="col-12"><b>Birthday</b><input class="form-control" type="date" placeholder="Birthday"></div>
+                  <div class="col-12">
+                      <label class="radio-label"><input type="radio" name="rbt-genero" value="F"> Female</label>
+                      <label class="radio-label"><input type="radio" name="rbt-genero" value="M"> Male</label>
+                      <br>
+                      <p class="texto-pequenio">
+                          By clicking Sign Up, you agree to our <a href="#">Terms</a>, <a href="#">Data Policy</a> and <a href="#">Cookies Policy</a>. You may receive SMS Notifications from us and can opt out any time.
+                      </p>
+                      <input class="btn btn-success" type="button" value="Sign Up">
+                  </div>
+                  
+              </div>
+            </form>
+        </div>
       </div>
-
     </main><!-- /.container -->
 
     <!-- Bootstrap core JavaScript
