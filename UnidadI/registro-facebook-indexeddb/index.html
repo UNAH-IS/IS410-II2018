@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Facebook</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" />
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        
+        <form class="form-inline my-2 my-lg-0 ml-auto">
+          <input class="form-control mr-sm-2" type="text" placeholder="Email or phone" aria-label="Email or phone">
+          <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password">
+          <button class="btn btn-primary my-2 my-sm-0" type="submit">Login</button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+          <h2>Connect with friends and the world around you on Facebook.</h2>
+          <table id="tabla-items">
+              <tr>
+                <td><img src="img/icono1.png"></td>
+                <td class="item"><strong>See photos and updates</strong> from friends in News Feed.</td>
+              </tr>
+              <tr>
+                <td><img src="img/icono2.png"></td>
+                <td class="item"><strong>Share what's new</strong> in your life on your Timeline.</td>
+              </tr>
+              <tr>
+                <td><img src="img/icono3.png"></td>
+                <td class="item"><strong>Find more</strong> of what you're looking for with Facebook Search.</td>
+              </tr>
+            </table>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+            <h1>Sign Up</h1>
+            <span class="item">It’s free and always will be.</span>
+            <form id="formulario-registro">
+              <div class="row">
+                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <input class="form-control" type="text" placeholder="First name" id="txt-firstname">
+                    <div class="valid-feedback">
+                      El nombre esta correcto!    
+                    </div>
+                    <div class="invalid-feedback">
+                      Este campo esta incorrecto
+                    </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <input class="form-control" type="text" placeholder="Last name" id="txt-lastname">
+                    <div class="valid-feedback">
+                      El apellido esta correcto!    
+                    </div>
+                    <div class="invalid-feedback">
+                      Este campo esta incorrecto
+                    </div>
+                    <!--div id="lastname-correcto" style="display:none;">
+                        Correcto
+                    </div>
+                    <div  id="lastname-incorrecto" style="display:none;">
+                        Incorrecto
+                    </div-->
+                  </div>
+                  <div class="col-12">
+                    <input class="form-control" type="text" placeholder="Mobile number or email" id="txt-email" onkeyup="validarEmail(this.value);">
+                  </div>
+                  <div class="col-12">
+                    <input class="form-control" type="password" placeholder="New password" id="txt-password">
+                  </div>
+                  <div class="col-12"><b>Birthday</b><input class="form-control" type="date" placeholder="Birthday" id="txt-birthday"></div>
+                  <div class="col-12">
+                      <label class="radio-label"><input type="radio" name="rbt-genero" value="F"> Female</label>
+                      <label class="radio-label"><input type="radio" name="rbt-genero" value="M"> Male</label>
+                      <br>
+                      <p class="texto-pequenio">
+                          By clicking Sign Up, you agree to our <a href="#">Terms</a>, <a href="#">Data Policy</a> and <a href="#">Cookies Policy</a>. You may receive SMS Notifications from us and can opt out any time.
+                      </p>
+                      <input class="btn btn-success" type="button" value="Sign Up" onclick="validar();">
+                  </div>
+                  
+              </div>
+            </form>
+        </div>
+      </div>
+    </main><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/controlador.js"></script>
+    <!---script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script-->
+    
+  </body>
+</html>

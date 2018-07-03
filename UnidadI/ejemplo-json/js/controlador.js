@@ -9,6 +9,9 @@ var persona =
         }
     };
 
+persona.genero = "Masculino"
+
 console.log("Mes fecha de nacimiento: " + persona.fechaNacimiento.mes);
 console.log("Nombre: " + persona.nombre);
 console.log(persona);
+

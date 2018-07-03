@@ -95,3 +95,16 @@ Existen 3 formas para incluir estilos en una página web:
     Se escriben los estilos con los respectivos selectores en un nuevo archivo con extensión css
     Para incluir el archivo externo en el html se hace de la siguiente forma:
         <link href="url-archivo.css" rel="stylesheet">
+
+
+
+
+
+Aplicaciones web progresivas: App web que parezcan aplicaciones normales
+Almacenamiento del lado del cliente:
+    -Cookies:nombre = Juan
+    -WebSQL => Chrome, Safari  (Deprecada)
+    -IndexedDB => Los nuevos navegadores.
+
+
+IndexedDB: Base de datos orientada a documentos (No SQL)
