@@ -19,6 +19,23 @@ function abrirBD(){
     solicitud.onsuccess = function(evento){
         console.log("Se abrio la base de datos");
         db = solicitud.result;
+        //Obtener los registros del objectstore de usuarios y mostrarlos en la consola.
+        var transaccion = db.transaction(["usuarios"], "readonly"); //readonly cuando sea solo para consultar informacion
+        var objectStoreUsuarios = transaccion.objectStore("usuarios");
+        //Un cursor es un componente que permite recorrer de uno en uno los objetos de un objectstore
+        var cursor = objectStoreUsuarios.openCursor();
+        cursor.onsuccess = function(evento){
+            //Esta funcion se ejecutara por cada objeto en el objectstore
+            if (evento.target.result){
+                console.log(evento.target.result.value); 
+                document.getElementById("tabla-usuarios").innerHTML += 
+                        "<tr><td>"+evento.target.result.value.firstname+
+                        "</td><td>"+evento.target.result.value.email+"</td></tr>";          
+                evento.target.result.continue();
+            }else{
+                console.log("Se termino de leer el objectstore");
+            }
+        }
     }
 
     //En caso de que no exista o necesite una actualizacion, luego de ejecutar esta funcion se abrirá la base de datos
