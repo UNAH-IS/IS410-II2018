@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <input class="texto" type="text" id="txt-nombre" name="txt-nombre" value="Juan">
+    <input class="texto" type="text" id="txt-apellido" value="Perez">
+    <label><input type="radio" name="rbt-genero" value="M">Masculino</label>
+    <label><input type="radio" name="rbt-genero" value="F">Femenino</label>
+    <input type="button" id="btn-accion" value="Genero Seleccionado">
+    <div id="div-eventos" style="background-color: black; color:white; padding:50px;">Este es un div con eventos</div>
+    <div id="div-2" style="background-color: black; color:white; padding:50px;">Este es un div SIN eventos</div>
+    <button id="btn-mostrar" type="button">Mostrar div</button>
+    <button id="btn-ocultar" type="button">Ocultar div</button>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        console.log("Valor con jquery: "+$("#txt-nombre").val());
+        console.log("Valor con JS nativo: "+document.getElementById("txt-nombre").value);
+
+        /*
+        $(".texto");
+        $("h1");
+        $("input[type='text']")
+        $("input[name='txt-nombre']")  //getElementsByName
+        */
+        
+        $("#btn-accion").click(function(){
+            alert("Genero: "+ $("input[name='rbt-genero']:checked").val());
+        });
+
+        $("#div-eventos").click(function(){
+            console.log("Se hizo click en el div");
+        });
+
+        $("#div-eventos").dblclick(function(){
+            console.log("Se hizo doble click en el div");
+        });
+        
+        $("#div-eventos").mouseenter(function(){
+            console.log("El cursor entro en el div");
+            $("#div-eventos").css("background-color","red");
+            $("#div-2").css("background-color","red");
+        });
+
+        $("#div-eventos").mouseleave(function(){
+            console.log("El cursor salio en el div");
+            $("#div-eventos").css("background-color","black");
+            $("#div-2").css("background-color","black");
+        });
+
+        $("#btn-mostrar").click(function(){
+            //$("#div-2").css("display","block");
+            $("#div-2").fadeIn(3000);
+        });
+
+        $("#btn-ocultar").click(function(){
+            //$("#div-2").css("display","none");
+            $("#div-2").fadeOut(3000);
+        });
+    </script>
+
+
+</body>
+</html>

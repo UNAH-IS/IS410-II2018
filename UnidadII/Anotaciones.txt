@@ -1,0 +1,9 @@
+Envio de informacion al servidor (Solicitudes o peticiones)
+    *Peticiones sincronas
+        *Se tiene que utilizar la etiqueta form con los siguientes atributos:
+            -action:
+            -method: 
+                -GET: Metodo de envio de informacion que envia la informacion mediante la url
+        *Los componentes del formulario tienen que tener el atributo name.
+        *Para enviar la informacion y desencadenar la peticion sincrona debe haber un boton del tipo submit
+    *Peticiones asincronas (AJAX)

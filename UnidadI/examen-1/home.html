@@ -8,6 +8,7 @@
     <title>Facebook</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="fontawesome/css/all.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
@@ -49,36 +50,42 @@
     </nav>
 
     <main role="main" class="container">
-      <div class="row">
-        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-          <div class="post">
-            <h5>Agregar post</h5>
-            <select class="form-control" id="slc-usuario"></select>
-            <textarea placeholder="¿Que estas pensando?" class="form-control"></textarea>
-            </textarea>
-            <input type="date" class="form-control">
-            <br>
-            <input type="button" class="btn btn-primary" value="Post">
-          </div>
-        </div>
-        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-            <div class="post">
-              <img src="img/profile.jpg" class="rounded-circle img-thumbnail">
-              <b>Juan Perez</b>
-              <small class="text-muted">(12/Enero/2012)</small>
-              <hr>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi illo itaque, corporis deserunt repellendus, dolor aut error delectus ratione hic repellat atque illum culpa nostrum ducimus cum assumenda veniam eveniet alias saepe. Minima optio temporibus iste ea sint corporis dicta maxime! Praesentium facilis nulla incidunt laboriosam laudantium eveniet iste, eligendi deserunt magni!
-            </div>
-        </div>     
-      </div>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#postModal">
+        Nuevo post
+      </button>
+      <div class="row"  id="posts"></div>
     </main><!-- /.container -->
 
+    <!-- Ventana modal nuevo post -->
+    <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="postModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="postModalLabel">Agregar Post</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <select class="form-control" id="slc-usuario"></select>
+              <textarea placeholder="¿Que estas pensando?" class="form-control" id="txt-post"></textarea>
+              <input type="date" class="form-control" id="txt-fecha">
+              <br>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <input type="button" class="btn btn-primary" value="Post" onclick="guardarPost();">
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/controlador.js"></script>
-    <!---script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
     
   </body>
 </html>

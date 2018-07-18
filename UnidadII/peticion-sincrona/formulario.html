@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <form action="procesar.php" method="GET">
+        <input name="txt-usuario" type="text" placeholder="Usuario" >
+        <input name="txt-password" type="password" placeholder="Password" >
+        <input name="btn-enviar" type="submit" value="Enviar informacion al servidor">
+    </form>
+</body>
+</html>
+
+<!--
+Metodo de envio de informacion GET: Envia la informacion mediante la url
+Formato URLEncoded: 
+URL?parametro1=valor1&parametro2=valor2&...&parametroN=valorN
+
+http://localhost/poo/IS410-II2018/UnidadII/peticion-sincrona/formulario.html
+?
+txt-usuario=jperez&
+txt-password=asd.456&
+btn-enviar=Enviar+informacion+al+servidor
+
+
+-->
