@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body>
+    <input type="text" id="usuario" placeholder="Usuario">
+    <input type="password" id="password" placeholder="Password">
+    <button id="btn-login" type="button">Login</button>
+    <div id="resultado"></div>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $("#btn-login").click(function(){
+            //alert("Se ejecutará una peticion asincrona");
+            var parametros= "usuario="+$("#usuario").val()+"&password="+$("#password").val();
+            console.log("Informacion a enviar: " + parametros);
+            //Funcion de jquery para ejecutar una peticion asincrona con ajax
+            $.ajax({
+                url:"procesar.php",//URL donde se enviara los datos
+                method:"GET",//Metodo de envio de informacion
+                data:parametros,//UrlEncoded
+                success:function(respuesta){ //Funcion que se ejecutara cuando el servidor responda
+                    console.log("El servidor envia lo siguiente: " + respuesta);
+                    $("#resultado").append("El servidor envia lo siguiente: " + respuesta + "<br>");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
