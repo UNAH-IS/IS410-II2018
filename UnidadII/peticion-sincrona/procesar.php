@@ -1,3 +1,6 @@
+<?php
+    //sleep(10);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,9 +11,21 @@
 </head>
 <body>
     <?php
-        echo "Este archivo recibió la informacion<br>";
-        echo "Usuario ingresado: ".$_GET["txt-usuario"]."<br>";
-        echo "Password ingresado: ".$_GET["txt-password"]."<br>";
+        /*echo "Este archivo recibió la informacion<br>";
+        echo $_GET["txt-nombre"]."<br>";
+        echo $_GET["txt-apellido"]."<br>";
+        echo $_GET["txt-usuario"]."<br>";
+        echo $_GET["txt-password"]."<br>";
+        echo $_GET["rbt-genero"]."<br>";
+        
+        var_dump($_GET["chk-gustos"]); //Esto es con fines de depuracion
+        */
+
+        var_dump($_GET);
+
+        
+        
     ?>    
 </body>
 </html>
+

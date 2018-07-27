@@ -8,9 +8,21 @@
 </head>
 <body>
     <form action="procesar.php" method="GET">
-        <input name="txt-usuario" type="text" placeholder="Usuario" >
-        <input name="txt-password" type="password" placeholder="Password" >
-        <input name="btn-enviar" type="submit" value="Enviar informacion al servidor">
+        <input value="Jose" name="txt-nombre" type="text" placeholder="Nombre" ><br>
+        <input value="Perez" name="txt-apellido" type="text" placeholder="Apellido" ><br>
+        <input value="jperez" name="txt-usuario" type="text" placeholder="Usuario" ><br>
+        <input value="asd.456" name="txt-password" type="password" placeholder="Password" ><br>
+        Genero: <br>
+        <label><input type="radio" name="rbt-genero" value="F">Femenino</label>
+        <label><input type="radio" name="rbt-genero" value="M">Masculino</label><br>
+        Gustos: <br>
+        <label><input type="checkbox" value="Baleadas" name="chk-gustos[]">Baleadas</label><br>
+        <label><input type="checkbox" value="Sopa de mondongo" name="chk-gustos[]">Sopa de mondongo</label><br>
+        <label><input type="checkbox" value="Queso" name="chk-gustos[]">Queso</label><br>
+        <label><input type="checkbox" value="Curiles" name="chk-gustos[]">Curiles</label><br>
+        <label><input type="checkbox" value="Ella" name="chk-gustos[]">Ella</label><br>
+
+        <input name="btn-enviar" type="submit" value="Registrar usuario">
     </form>
 </body>
 </html>
