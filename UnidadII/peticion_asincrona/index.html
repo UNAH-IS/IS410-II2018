@@ -8,24 +8,46 @@
     
 </head>
 <body>
-    <input type="text" id="usuario" placeholder="Usuario">
-    <input type="password" id="password" placeholder="Password">
-    <button id="btn-login" type="button">Login</button>
+    <input type="text" id="txt-usuario" placeholder="Usuario">
+    <input type="password" id="txt-password" placeholder="Password">
+    <button id="btn-login-html" type="button">Login respuesta html</button>
+    <button id="btn-login-json" type="button">Login respuesta json</button>
     <div id="resultado"></div>
     <script src="js/jquery.min.js"></script>
     <script>
-        $("#btn-login").click(function(){
+        $("#btn-login-html").click(function(){
             //alert("Se ejecutará una peticion asincrona");
-            var parametros= "usuario="+$("#usuario").val()+"&password="+$("#password").val();
+            var parametros= "usuario="+$("#txt-usuario").val()+"&password="+$("#txt-password").val()+"&respuesta=html";
             console.log("Informacion a enviar: " + parametros);
             //Funcion de jquery para ejecutar una peticion asincrona con ajax
             $.ajax({
                 url:"procesar.php",//URL donde se enviara los datos
                 method:"GET",//Metodo de envio de informacion
                 data:parametros,//UrlEncoded
+                dataType:"html",//Tipo de formato de la respuesta del servidor
                 success:function(respuesta){ //Funcion que se ejecutara cuando el servidor responda
                     console.log("El servidor envia lo siguiente: " + respuesta);
                     $("#resultado").append("El servidor envia lo siguiente: " + respuesta + "<br>");
+                }
+            });
+        });
+
+
+        $("#btn-login-json").click(function(){
+            //alert("Se ejecutará una peticion asincrona");
+            var parametros= "usuario="+$("#txt-usuario").val()+"&password="+$("#txt-password").val()+"&respuesta=json";
+            console.log("Informacion a enviar: " + parametros);
+            //Funcion de jquery para ejecutar una peticion asincrona con ajax
+            $.ajax({
+                url:"procesar.php",//URL donde se enviara los datos
+                method:"GET",//Metodo de envio de informacion
+                data:parametros,//UrlEncoded
+                dataType:"json",//Tipo de formato de la respuesta del servidor
+                success:function(respuesta){ //Funcion que se ejecutara cuando el servidor responda
+                    console.log(respuesta);
+                    console.log("El servidor envia lo siguiente: " + JSON.stringify(respuesta));
+                    $("#resultado").append("El servidor envia lo siguiente: " + respuesta + "<br>");
+                    console.log("Nombre del usuario: " + respuesta.usuario);
                 }
             });
         });
