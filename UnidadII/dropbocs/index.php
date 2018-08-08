@@ -62,8 +62,30 @@
               $linea="";
               while(($linea = fgets($archivo))){
                 $partes = explode(",",$linea);
+                if ($partes[1]=="folder")
+                  $cssIcono = "fas fa-folder-open";
+                if ($partes[1]=="file"){
+                  $partesArchivo = explode(".",$partes[0]);
+                  switch($partesArchivo[1]){
+                    case "docx":
+                      $cssIcono = "far fa-file-word";
+                      break;
+                    case "pdf":
+                      $cssIcono = "far fa-file-pdf";
+                      break;
+                    case "png":
+                      $cssIcono = "far fa-file-image";
+                      break;
+                    case "jpg":
+                      $cssIcono = "far fa-file-image";
+                      break;
+                    default:
+                      $cssIcono = "far fa-file";
+                      break;
+                  } 
+                }
                 echo '<tr>
-                        <td><a href="index.php?carpeta='.$partes[0].'"><i class="fas fa-folder-open"></i> '.$partes[0].'</a></td>
+                        <td><a href="index.php?carpeta='.$_GET["carpeta"]."/".$partes[0].'"><i class="'.$cssIcono.'"></i> '.$partes[0].'</a></td>
                         <td>'.$partes[2].'</td>
                         <td>'.$partes[4].'</td>
                         <td>'.$partes[5].'</td>
@@ -96,15 +118,15 @@
           <div class="modal-body">
             Para crear una carpeta debe de crear un archivo csv con el nombre de la carpeta y una carpeta utilizando la funcion de php mkdir:<br>
             Ejemplo:  mkdir("/direccion/del/directorio", 0700);
-            <input id="" type="text" class="form-control" placeholder="Nombre carpeta">
-            <input id="" type="text" class="form-control" placeholder="Fecha creacion">
-            <input id="" type="text" class="form-control" placeholder="Fecha modificacion">
-            <input id="" type="text" class="form-control" placeholder="Usuario">
-            <input id="" type="text" class="form-control" placeholder="Tamaño">
+            <input id="carpeta" type="text" class="form-control" placeholder="Nombre carpeta">
+            <input id="fecha-creacion" type="date" class="form-control" placeholder="Fecha creacion">
+            <input id="fecha-modificacion" type="date" class="form-control" placeholder="Fecha modificacion">
+            <input id="usuario" type="text" class="form-control" placeholder="Usuario">
+            <input id="tamanio" type="text" class="form-control" placeholder="Tamaño">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-primary">Crear carpeta</button>
+            <button type="button" class="btn btn-primary" id="btn-crear-carpeta">Crear carpeta</button>
           </div>
         </div>
       </div>
