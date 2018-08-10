@@ -17,6 +17,7 @@ $("#btn-crear-carpeta").click(function(){
 					"tamanio="+$("#tamanio").val()+"&"+
 					"carpeta-actual="+$("#txt-carpeta-actual").val();
 	console.log("Se enviara esta informacion al servidor: " + parametros);
+	$("#btn-crear-carpeta").attr("disabled",true);
 
 	$.ajax({
 		url:"ajax/crear-carpeta.php",
@@ -24,7 +25,22 @@ $("#btn-crear-carpeta").click(function(){
 		method:"POST",
 		dataType:"json",
 		success:function(respuesta){
+			$("#btn-crear-carpeta").attr("disabled",false);
 			console.log(respuesta);
-		}
-	});
+			if (respuesta.codigoRespuesta == 1){
+				$('#modal-carpeta').modal('hide');
+				$("#div-respuesta").html(respuesta.mensajeRespuesta);
+				$("#div-respuesta").fadeIn(300);
+
+				$("#contenido-carpeta").append(
+					`<tr>
+						<td><a href="index.php?carpeta="><i class="fas fa-folder"></i></a>${$("#carpeta").val()}</td>
+						<td>${$("#fecha-modificacion").val()}</td>
+						<td>${$("#usuario").val()}</td>
+						<td>${$("#tamanio").val()}</td>
+					</tr>`
+				);
+              }	
+			}
+		});
 });

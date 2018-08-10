@@ -55,7 +55,7 @@
               <th>Tamaño</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="contenido-carpeta">
             <?php
               //Forma facil
               $archivo = fopen("data/".$_GET["carpeta"].".csv", "r");
@@ -98,6 +98,8 @@
         </table>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-carpeta">Crear carpeta</button>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-archivo">Ingresar archivo</button>
+        <hr>
+        <div class="alert alert-success" role="alert" id="div-respuesta" style="display:none"></div>
       </div>
 
     </main><!-- /.container -->
