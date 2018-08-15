@@ -68,7 +68,7 @@
                 //json_decode Recibe una cadena en JSON y retorna un arreglo
                 $cssIcono="";
                 $registro = json_decode($linea,true);
-                var_dump($registro);
+                //var_dump($registro);
                 if ($registro["tipo"]=="folder")
                   $cssIcono = "fas fa-folder-open";
                 if ($registro["tipo"]=="file"){
@@ -152,15 +152,15 @@
             </button>
           </div>
           <div class="modal-body">
-            <input id="" type="text" class="form-control" placeholder="Nombre archivo">
-            <input id="" type="text" class="form-control" placeholder="Fecha creacion">
-            <input id="" type="text" class="form-control" placeholder="Fecha modificacion">
-            <input id="" type="text" class="form-control" placeholder="Usuario">
-            <input id="" type="text" class="form-control" placeholder="Tamaño">
+            <input id="nombre-archivo" type="text" class="form-control" placeholder="Nombre archivo">
+            <input id="fecha-creacion-archivo" type="date" class="form-control" placeholder="Fecha creacion">
+            <input id="fecha-modificacion-archivo" type="date" class="form-control" placeholder="Fecha modificacion">
+            <input id="usuario-archivo" type="text" class="form-control" placeholder="Usuario">
+            <input id="tamanio-archivo" type="text" class="form-control" placeholder="Tamaño">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-primary">Crear archivo</button>
+            <button id="btn-guardar-archivo" type="button" class="btn btn-primary">Crear archivo</button>
           </div>
         </div>
       </div>

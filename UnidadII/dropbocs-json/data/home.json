@@ -1,2 +1,13 @@
 {"nombre":"carpeta1","tipo":"folder","fechaCreacion":"12/12/2012","fechaModificacion":"12/12/2012","usuario":"jperez","tamanio":"5mb"}
 {"nombre":"archivo-pdf.pdf","tipo":"file","fechaCreacion":"12/12/2012","fechaModificacion":"12/12/2012","usuario":"jperez","tamanio":"5mb"}
+{"nombre":"CarpetaX","fechaCreacion":"2018-01-01","fechaModificacion":"2018-01-01","usuario":"jperez","tamanio":"343","carpetaActual":"home","tipo":"folder"}
+{"nombre":"Ejercicios1","fechaCreacion":"2018-01-01","fechaModificacion":"2018-01-01","usuario":"jperez","tamanio":"34","carpetaActual":"home","tipo":"folder"}
+{"nombre":"Ejercicios2","fechaCreacion":"2018-01-01","fechaModificacion":"2018-01-01","usuario":"jperez","tamanio":"564","carpetaActual":"home","tipo":"folder"}
+{"nombre":"Ejercicios3","fechaCreacion":"2018-01-01","fechaModificacion":"2018-01-01","usuario":"jperez","tamanio":"564","carpetaActual":"home","tipo":"folder"}
+{"nombre":"Ejercicio4","fechaCreacion":"2018-01-01","fechaModificacion":"2018-01-01","usuario":"jperez","tamanio":"343","carpetaActual":"home","tipo":"folder"}
+{"nombre":"Ejercicios5","fechaCreacion":"2018-01-01","fechaModificacion":"2018-01-01","usuario":"jperez","tamanio":"34","carpetaActual":"home","tipo":"folder"}
+{"nombre":"\u00c1serej\u00e9","fechaCreacion":"2018-01-01","fechaModificacion":"2018-01-01","usuario":"jperez","tamanio":"333","carpetaActual":"home","tipo":"folder"}
+{"nombre":"archivo.docx","fechaCreacion":"2018-01-01","fechaModificacion":"2018-01-01","usuario":"jperez","tamanio":"666","tipo":"file","carpetaActual":"home"}
+{"nombre":"archivo.pdf","fechaCreacion":"2018-01-01","fechaModificacion":"2018-01-01","usuario":"jperez","tamanio":"45454","tipo":"file","carpetaActual":"home"}
+{"nombre":"archivo.png","fechaCreacion":"2018-01-01","fechaModificacion":"2018-01-01","usuario":"mmarinez","tamanio":"345","tipo":"file","carpetaActual":"home"}
+{"nombre":"archivoSinExtension","fechaCreacion":"2018-01-01","fechaModificacion":"2018-01-01","usuario":"mmarinez","tamanio":"345","tipo":"file","carpetaActual":"home"}
