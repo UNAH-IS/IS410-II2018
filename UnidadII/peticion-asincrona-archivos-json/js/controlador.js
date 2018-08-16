@@ -7,6 +7,8 @@ $("#btn-guardar").click(function(){
             "genero="+$("input[name='rbt-genero']:checked").val()+"&"+
             $('input[name="chk-gustos[]"]:checked').serialize();
 
+    console.log("Gustos serializados: " + $('input[name="chk-gustos[]"]:checked').serialize());
+
     console.log(parametros);
 
     $.ajax({
@@ -15,7 +17,24 @@ $("#btn-guardar").click(function(){
         data:parametros,
         dataType:"json",
         success:function(respuesta){
-            console.log(respuesta);
+            if (respuesta.codigo==0)
+                alert(respuesta.mensaje);
+        },
+        error:function(error){
+            console.log(error);
         }
+    });
+});
+
+$(document).ready(function(){
+    $.ajax({
+       url:"ajax/obtener-usuarios.php",
+       dataType:"json",
+       success: function(respuesta){
+            console.log(respuesta);
+       },
+       error:function(error){
+           console.log(error);
+       }
     });
 });

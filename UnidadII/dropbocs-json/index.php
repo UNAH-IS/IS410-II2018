@@ -91,8 +91,13 @@
                       break;
                   } 
                 }
+                $enlace = "";
+                if ($registro["tipo"]=="folder")
+                  $enlace= '<a href="index.php?carpeta='.$_GET["carpeta"]."/".$registro["nombre"].'"><i class="'.$cssIcono.'"></i> '.$registro["nombre"].'</a>';
+                else if ($registro["tipo"]=="file")
+                  $enlace='<button onclick="detalleArchivo(\''.$registro["nombre"].'\')" class="btn btn-link" type="button"><i class="'.$cssIcono.'"></i> '.$registro["nombre"]."</button>";
                 echo '<tr>
-                        <td><a href="index.php?carpeta='.$_GET["carpeta"]."/".$registro["nombre"].'"><i class="'.$cssIcono.'"></i> '.$registro["nombre"].'</a></td>
+                        <td>'.$enlace.'</td>
                         <td>'.$registro["fechaCreacion"].'</td>
                         <td>'.$registro["usuario"].'</td>
                         <td>'.$registro["tamanio"].'</td>

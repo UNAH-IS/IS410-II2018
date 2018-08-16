@@ -107,3 +107,9 @@ $("#btn-guardar-archivo").click(function(){
 		}
 	});
 }); 
+
+
+
+function detalleArchivo(nombreArchivo){
+	alert("Mostrar una ventana modal, ejecutar una peticio ajax que obtenga todo el detalle del archivo y lo visualice en la ventana modal, Nombre archivo: " + nombreArchivo);
+}

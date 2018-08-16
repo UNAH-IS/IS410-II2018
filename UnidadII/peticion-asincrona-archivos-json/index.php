@@ -25,6 +25,19 @@
         <input name="btn-enviar" type="button" value="Registrar usuario" id="btn-guardar">
     </form>
     <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Usuario</th>
+                <th>Genero</th>
+            </tr>
+        </thead>
+        <tbody id="contenido-usuarios">
+        </tbody>
+    </table>
+
     <?php 
         //Leer el archivo.
        /* $archivo = fopen("usuarios.csv","r");
