@@ -17,8 +17,10 @@ $("#btn-guardar").click(function(){
         data:parametros,
         dataType:"json",
         success:function(respuesta){
-            if (respuesta.codigo==0)
+            if (respuesta.codigo==0){
+                cargarUsuarios();
                 alert(respuesta.mensaje);
+            }
         },
         error:function(error){
             console.log(error);
@@ -27,14 +29,29 @@ $("#btn-guardar").click(function(){
 });
 
 $(document).ready(function(){
-    $.ajax({
-       url:"ajax/obtener-usuarios.php",
-       dataType:"json",
-       success: function(respuesta){
-            console.log(respuesta);
-       },
-       error:function(error){
-           console.log(error);
-       }
-    });
+    cargarUsuarios();
 });
+
+function cargarUsuarios(){
+    $("#contenido-usuarios").html("");
+    $.ajax({
+        url:"ajax/obtener-usuarios.php",
+        dataType:"json",
+        success: function(respuesta){
+             console.log(respuesta);
+             for (var i=0;i<respuesta.length;i++){
+                 $("#contenido-usuarios").append(
+                     `<tr>
+                     <td>${respuesta[i].nombre}</td>
+                     <td>${respuesta[i].apellido}</td>
+                     <td>${respuesta[i].usuario}</td>
+                     <td>${respuesta[i].genero}</td>
+                     </tr>`
+                 );
+             }
+        },
+        error:function(error){
+            console.log(error);
+        }
+     });
+}
