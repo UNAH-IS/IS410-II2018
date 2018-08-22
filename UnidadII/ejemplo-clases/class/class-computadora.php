@@ -1,7 +1,7 @@
 <?php 
 
 class Computadora {
-
+    //Plain Old Java Object, BEan
     private $marca;
     private $modelo;
     private $color;
