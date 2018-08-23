@@ -7,7 +7,7 @@
             && $registro["password"]==$_POST["password"]){
                 //Usuario con credenciales correctas
                 $_SESSION["usuario"] = $_POST["usuario"];
-                $_SESSION["tipoUsuario"] = $registro["tipoUsuario"];
+                //$_SESSION["tipoUsuario"] = $registro["tipoUsuario"];
                 echo '{"codigo":0,"mensaje":"Usuario logueado con exito"}';
                 fclose($archivo);
                 exit();
